@@ -1,12 +1,12 @@
 import ProductCard from "./ProductCard";
 
-export default function ProductList({products, cart, setCart}){
+export default function ProductList({products, setCart}){
 
     return(
 
         <div className="row">
             {
-                products.map((product, index)=> (<ProductCard key={index} product={product} setCart={setCart} cart={cart}/>))
+                products.map((product, index)=> (<ProductCard key={index} product={product} setCart={setCart}/>))
             }
         </div>
     )

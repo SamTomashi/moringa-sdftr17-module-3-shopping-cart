@@ -1,7 +1,7 @@
 // import { useState } from "react";
 // import Button from "./Button";
 
-export default function ProductCard({product, setCart, cart}) {
+export default function ProductCard({product, setCart}) {
     const {name, category, price} = product
 
     
