@@ -43,7 +43,14 @@ function App() {
   return (
     <div className='container'>
 
-      <ProductList products={products}/>
+      <div className='content'>
+        <ProductList products={products}/>
+        <ul>
+          <li>Product 1</li>
+          <li>Product 2</li>
+        </ul>
+      </div>
+      
       
     </div>
   )
