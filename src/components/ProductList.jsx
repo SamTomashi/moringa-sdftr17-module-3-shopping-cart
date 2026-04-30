@@ -1,8 +1,6 @@
-import { useState } from "react";
 import ProductCard from "./ProductCard";
 
-export default function ProductList({products}){
-    const [cart, setCart] = useState([])
+export default function ProductList({products, cart, setCart}){
 
     return(
 

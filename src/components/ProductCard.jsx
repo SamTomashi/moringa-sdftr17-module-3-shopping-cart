@@ -11,7 +11,6 @@ export default function ProductCard({product, setCart, cart}) {
         )
 
     }
-        console.log(cart)
 
   return (
     <div className="card col-3 m-1">

@@ -1,4 +1,5 @@
 
+import { useState } from 'react'
 import './App.css'
 import ProductList from './components/ProductList'
 
@@ -40,14 +41,17 @@ function App() {
     "inStock": true
   }
 ]
+
+  const [cart, setCart] = useState([])
+        // console.log(cart)
+
   return (
     <div className='container'>
 
       <div className='content'>
-        <ProductList products={products}/>
+        <ProductList products={products} cart={cart} setCart={setCart}/>
         <ul>
-          <li>Product 1</li>
-          <li>Product 2</li>
+         {cart.map((product)=> (<li key={product}>{product}</li>))}
         </ul>
       </div>
       
