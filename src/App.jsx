@@ -1,59 +1,48 @@
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import ProductList from './components/ProductList'
+// import Form from './components/Form'
 
 function App() {
-  const products = [
-  {
-    "id": 1,
-    "name": "Laptop",
-    "category": "Electronics",
-    "price": 899.99,
-    "inStock": true
-  },
-  {
-    "id": 2,
-    "name": "Smartphone",
-    "category": "Electronics",
-    "price": 599.99,
-    "inStock": true
-  },
-  {
-    "id": 3,
-    "name": "Office Chair",
-    "category": "Furniture",
-    "price": 149.99,
-    "inStock": false
-  },
-  {
-    "id": 4,
-    "name": "Running Shoes",
-    "category": "Sportswear",
-    "price": 79.99,
-    "inStock": true
-  },
-  {
-    "id": 5,
-    "name": "Coffee Maker",
-    "category": "Home Appliances",
-    "price": 49.99,
-    "inStock": true
+  // const products = []
+
+  const [products, setProducts] = useState([])
+
+  const [selectedProduct, setSelectedProduct] = useState()
+
+  useEffect(()=> {
+    fetch("http://localhost:3001/products")
+  .then((response)=>response.json())
+  .then(data => {
+    setProducts(data)
+    console.log("The dependency state was updated")
+  })
+  },[selectedProduct])
+
+
+  function HandleOnChange(event){
+    setSelectedProduct(event.target.value)
   }
-]
+
 
   const [cart, setCart] = useState([])
         // console.log(cart)
 
   return (
     <div className='container'>
+      <select className="form-select" onChange={HandleOnChange}>
+       {products.map((product)=> ( <option key={product.id} value={product.id}>{product.name}</option>))}
+      </select>
 
       <div className='content'>
         <ProductList products={products} cart={cart} setCart={setCart}/>
         <ul>
          {cart.map((product)=> (<li key={product}>{product}</li>))}
         </ul>
-      </div>
+      </div> 
+
+      {/* <Form/> */}
       
     </div>
   )
