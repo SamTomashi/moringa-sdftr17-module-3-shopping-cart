@@ -20,9 +20,20 @@ function App() {
   })
   },[selectedProduct])
 
+  function getProduct(id){
+
+    fetch(`http://localhost:3001/products/${id}`)
+  .then((response)=>response.json())
+  .then(data => {
+    console.log(data)
+  })
+
+  }
+
 
   function HandleOnChange(event){
     setSelectedProduct(event.target.value)
+    getProduct(event.target.value)
   }
 
 
