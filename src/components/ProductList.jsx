@@ -1,13 +1,16 @@
+import { useContext } from "react";
 import ProductCard from "./ProductCard";
+import { ProductContext } from "../context/ProductContext";
 
-export default function ProductList({products, setCart}){
+export default function ProductList() {
 
-    return(
+    const {products} = useContext(ProductContext)
 
-        <div className="row">
-            {
-                products.map((product, index)=> (<ProductCard key={index} product={product} setCart={setCart}/>))
-            }
-        </div>
-    )
+  return (
+    <div className="row">
+      {products.map((product) => (
+        <ProductCard key={product.id} product={product}/>
+      ))}
+    </div>
+  );
 }
