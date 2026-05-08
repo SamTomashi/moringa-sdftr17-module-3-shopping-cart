@@ -1,10 +1,9 @@
-import { useContext } from "react";
 import ProductCard from "./ProductCard";
-import { ProductContext } from "../context/ProductContext";
+import { UseProducts } from "../context/ProductContext";
 
 export default function ProductList() {
 
-    const {products} = useContext(ProductContext)
+    const {products} = UseProducts()
 
   return (
     <div className="row">

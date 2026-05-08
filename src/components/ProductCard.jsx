@@ -1,12 +1,22 @@
-import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import { UseCart } from "../context/CartContext";
 
-export default function ProductCard({ product}) {
+export default function ProductCard({ product }) {
+  const { setCart } = UseCart();
 
-  const {setCart} = useContext(CartContext)
+  function AddProductToCart(productToAdd) {
+    fetch("http://localhost:3001/cart", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(productToAdd),
+    });
+  }
 
-  function handleOnClick(){
-    setCart((prev)=> [product, ...prev])
+  function handleOnClick() {
+    setCart((prev) => [product, ...prev]);
+    AddProductToCart(product)
   }
 
   return (
@@ -16,7 +26,7 @@ export default function ProductCard({ product}) {
         <h5 className="card-title">{product.title}</h5>
         <p className="card-text">{product.description}</p>
         <p>{product.pice}</p>
-        <button onClick={()=> handleOnClick()} className="btn btn-primary">
+        <button onClick={() => handleOnClick()} className="btn btn-primary">
           Add to cart
         </button>
       </div>

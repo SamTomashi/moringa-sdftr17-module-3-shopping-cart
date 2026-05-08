@@ -1,12 +1,11 @@
-import { useContext } from "react"
-import { CartContext } from "../context/CartContext"
+import { UseCart } from "../context/CartContext"
 
 export default function Cart(){
-    const {cart} = useContext(CartContext)
+    const {cart} = UseCart()
     return(
         <ul>
             {
-                cart.map((product)=> (<li key={product.id}>{product.title}</li>))
+                cart.map((product, index)=> (<li key={index}>{product.title}</li>))
             }
         </ul>
     )
