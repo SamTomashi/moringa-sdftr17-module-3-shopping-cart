@@ -6,7 +6,7 @@ export default function Login() {
         password: ""
     })
 
-    const [user, setUser] = useState({})
+    // const [user, setUser] = useState({})
 ///posts?_where={"or":[...]}  
 ///http://localhost:3001/users?email:eq=sam@tomashi.dev
     useEffect(()=> {

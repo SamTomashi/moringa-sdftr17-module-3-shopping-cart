@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { UseCart } from "../context/CartContext";
 
 export default function ProductCard({ product }) {
@@ -29,6 +30,9 @@ export default function ProductCard({ product }) {
         <button onClick={() => handleOnClick()} className="btn btn-primary">
           Add to cart
         </button>
+         <Link  to={`/product/${product.id}`} className="btn btn-warning">
+          View Product
+        </Link>
       </div>
     </div>
   );
