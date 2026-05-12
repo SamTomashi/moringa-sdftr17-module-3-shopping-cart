@@ -26,11 +26,11 @@ export default function ProductCard({ product }) {
       <div className="card-body">
         <h5 className="card-title">{product.title}</h5>
         <p className="card-text">{product.description}</p>
-        <p>{product.pice}</p>
+        <p style={{fontSize:"25px"}}><strong>{product.price}</strong></p>
         <button onClick={() => handleOnClick()} className="btn btn-primary">
           Add to cart
         </button>
-         <Link  to={`/product/${product.id}`} className="btn btn-warning">
+         <Link  to={`/product/${product.id}`} className="btn btn-warning m-3">
           View Product
         </Link>
       </div>
