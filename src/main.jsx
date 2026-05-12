@@ -7,10 +7,12 @@ import Home from "./pages/Home.jsx";
 import Login from "./pages/Login.jsx";
 import Checkout from "./pages/Checkout.jsx";
 import ProductDetails from "./pages/ProductDetails.jsx";
+import { UserProvider } from "./context/UserContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <UserProvider>
+      <BrowserRouter>
       {/* <App /> */}
       <Routes>
         <Route path="/" element={<App />} />
@@ -20,5 +22,6 @@ createRoot(document.getElementById("root")).render(
         <Route path="/product/:id" element={<ProductDetails/>}/>
       </Routes>
     </BrowserRouter>
+    </UserProvider>
   </StrictMode>,
 );

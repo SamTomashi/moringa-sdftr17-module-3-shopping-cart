@@ -1,6 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
+import { UseUser } from "../context/UserContext";
 
 export default function Navbar() {
+
+    const {user} = UseUser()
   return (
     <nav className="sticky-top navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -41,6 +44,9 @@ export default function Navbar() {
               </a>
             </li>
           </ul>
+        </div>
+        <div>
+            {user.email}
         </div>
       </div>
     </nav>

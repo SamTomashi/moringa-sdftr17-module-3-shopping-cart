@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 import { CartProvider } from "./context/CartContext";
 import { ProductProvider } from "./context/ProductContext";
+// import { UserProvider } from "./context/UserContext";
 /**
  * hooks:
  * - useState
@@ -17,18 +18,17 @@ import { ProductProvider } from "./context/ProductContext";
 
 function App() {
   return (
-    <ProductProvider>
-      <Navbar/>
-     <CartProvider>
-       <div className="container">
-        {/* <Login/> */}
-        <div className="content">
-          <ProductList />
-        <Cart/>
-        </div>
-      </div>
-     </CartProvider>
-    </ProductProvider>
+      <ProductProvider>
+        <Navbar />
+        <CartProvider>
+          <div className="container">
+            <div className="content">
+              <ProductList />
+              <Cart />
+            </div>
+          </div>
+        </CartProvider>
+      </ProductProvider>
   );
 }
 
