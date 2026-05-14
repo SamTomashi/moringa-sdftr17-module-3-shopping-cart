@@ -1,57 +1,113 @@
 {
-    "products":[
-  {
-    "id": 1,
-    "name": "Laptop",
-    "category": "Electronics",
-    "price": 899.99,
-    "inStock": true,
-    "image": "https://loremflickr.com/300/300/product"
-  },
-  {
-    "id": 2,
-    "name": "Smartphone",
-    "category": "Electronics",
-    "price": 599.99,
-    "inStock": true,
-        "image": "https://loremflickr.com/300/300/product"
-
-  },
-  {
-    "id": 3,
-    "name": "Office Chair",
-    "category": "Furniture",
-    "price": 149.99,
-    "inStock": false,
-        "image": "https://loremflickr.com/300/300/product"
-
-  },
-  {
-    "id": 4,
-    "name": "Running Shoes",
-    "category": "Sportswear",
-    "price": 79.99,
-    "inStock": true,
-        "image": "https://loremflickr.com/300/300/product"
-
-  },
-  {
-    "id": 5,
-    "name": "Coffee Maker",
-    "category": "Home Appliances",
-    "price": 49.99,
-    "inStock": true,
-        "image": "https://loremflickr.com/300/300/product"
-
-  },
-  {
-    "id": 6,
-    "name": "Cement bag",
-    "category": "Home construction",
-    "price": 300.99,
-    "inStock": true,
-        "image": "https://loremflickr.com/300/300/product"
-
-  }
-]
+  "cart": [
+    {
+      "id": "OJ6IrOMa7ns",
+      "title": "Smart Smoke Detector Alarm",
+      "description": "Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta nobis est eligendi optio",
+      "price": "999.93",
+      "image": "https://placehold.co/1400x800/F39C12/FFFFFF",
+      "url": "smart-smoke-detector-alarm",
+      "status": "active",
+      "updated_at": "2025-07-19 09:58:04",
+      "created_at": "2025-07-19 09:58:04",
+      "categories": [
+        "Fashion"
+      ]
+    },
+    {
+      "id": "P0w32dCrfg4",
+      "title": "Smart Smoke Detector Alarm",
+      "description": "Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta nobis est eligendi optio",
+      "price": "999.93",
+      "image": "https://placehold.co/1400x800/F39C12/FFFFFF",
+      "url": "smart-smoke-detector-alarm",
+      "status": "active",
+      "updated_at": "2025-07-19 09:58:04",
+      "created_at": "2025-07-19 09:58:04",
+      "categories": [
+        "Fashion"
+      ]
+    },
+    {
+      "id": "31w4SVS7_dY",
+      "title": "Electric Heated Blanket Throw",
+      "description": "Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta nobis est eligendi optio",
+      "price": "49.24",
+      "image": "https://placehold.co/1400x800/E67E22/FFFFFF",
+      "url": "electric-heated-blanket-throw",
+      "status": "active",
+      "updated_at": "2025-07-19 09:58:05",
+      "created_at": "2025-07-19 09:58:05",
+      "categories": [
+        "Electronics"
+      ]
+    },
+    {
+      "id": "rqpJ5lXHz0A",
+      "title": "Professional DSLR Camera Lens",
+      "description": "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint",
+      "price": "349.22",
+      "image": "https://placehold.co/1400x800/F1C40F/FFFFFF",
+      "url": "professional-dslr-camera-lens",
+      "status": "active",
+      "updated_at": "2025-07-19 09:58:06",
+      "created_at": "2025-07-19 09:58:06",
+      "categories": [
+        "Audio"
+      ]
+    },
+    {
+      "id": "_DWp-L7GSS8",
+      "title": "Professional DSLR Camera Lens",
+      "description": "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint",
+      "price": "349.22",
+      "image": "https://placehold.co/1400x800/F1C40F/FFFFFF",
+      "url": "professional-dslr-camera-lens",
+      "status": "active",
+      "updated_at": "2025-07-19 09:58:06",
+      "created_at": "2025-07-19 09:58:06",
+      "categories": [
+        "Audio"
+      ]
+    },
+    {
+      "id": "ouTRB-hY6Ng",
+      "title": "Gaming Controller Wireless Pro",
+      "description": "Eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem ut enim ad minima veniam",
+      "price": "927.84",
+      "image": "https://placehold.co/1400x800/2ECC71/FFFFFF",
+      "url": "gaming-controller-wireless-pro",
+      "status": "active",
+      "updated_at": "2025-07-19 09:58:08",
+      "created_at": "2025-07-19 09:58:08",
+      "categories": [
+        "Audio",
+        "Fashion",
+        "Travel"
+      ]
+    },
+    {
+      "id": "dqerBfSL_Tc",
+      "title": "Wireless Mouse Gaming Precision",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint",
+      "price": "959.54",
+      "image": "https://placehold.co/1400x800/3498DB/FFFFFF",
+      "url": "wireless-mouse-gaming-precision",
+      "status": "active",
+      "updated_at": "2025-07-19 09:58:18",
+      "created_at": "2025-07-19 09:58:18",
+      "categories": [
+        "Home",
+        "Travel"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "email": "sam@tomashi.dev",
+      "password": "12345678"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

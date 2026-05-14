@@ -1,62 +1,35 @@
-
-import { useState, useEffect } from 'react'
-import './App.css'
-import ProductList from './components/ProductList'
-// import Form from './components/Form'
+import "./App.css";
+import Cart from "./components/Cart";
+import Navbar from "./components/Navbar";
+// import Login from "./components/Login";
+import ProductList from "./components/ProductList";
+import { CartProvider } from "./context/CartContext";
+import { ProductProvider } from "./context/ProductContext";
+// import { UserProvider } from "./context/UserContext";
+/**
+ * hooks:
+ * - useState
+ * - useEffect
+ * State
+ * context
+ * useEffect
+ * Making API requests
+ */
 
 function App() {
-  // const products = []
-
-  const [products, setProducts] = useState([])
-
-  const [selectedProduct, setSelectedProduct] = useState()
-
-  useEffect(()=> {
-    fetch("http://localhost:3001/products")
-  .then((response)=>response.json())
-  .then(data => {
-    setProducts(data)
-    console.log("The dependency state was updated")
-  })
-  },[selectedProduct])
-
-  function getProduct(id){
-
-    fetch(`http://localhost:3001/products/${id}`)
-  .then((response)=>response.json())
-  .then(data => {
-    console.log(data)
-  })
-
-  }
-
-
-  function HandleOnChange(event){
-    setSelectedProduct(event.target.value)
-    getProduct(event.target.value)
-  }
-
-
-  const [cart, setCart] = useState([])
-        // console.log(cart)
-
   return (
-    <div className='container'>
-      <select className="form-select" onChange={HandleOnChange}>
-       {products.map((product)=> ( <option key={product.id} value={product.id}>{product.name}</option>))}
-      </select>
-
-      <div className='content'>
-        <ProductList products={products} cart={cart} setCart={setCart}/>
-        <ul>
-         {cart.map((product)=> (<li key={product}>{product}</li>))}
-        </ul>
-      </div> 
-
-      {/* <Form/> */}
-      
-    </div>
-  )
+      <ProductProvider>
+        <Navbar />
+        <CartProvider>
+          <div className="container">
+            <div className="content">
+              <ProductList />
+              <Cart />
+            </div>
+          </div>
+        </CartProvider>
+      </ProductProvider>
+  );
 }
 
-export default App
+export default App;
